@@ -11,7 +11,7 @@ genres = [] # Movie Genres
 imdbRatings = [] # IMDB Ratings
 metascores = [] # Metascores
 
-#For monitoring request frequency
+# For monitoring request frequency
 startTime = time.time()
 reqNum = 0
 
@@ -79,5 +79,5 @@ movieRatings = pd.DataFrame({
 })
 
 # Export data to .csv
-movieRatings.to_csv('movieRatings.csv', encoding='utf-8')
+movieRatings.to_csv('movieRatings.csv', encoding = 'utf-8', index = False)
 print("Data Exported to movieRatings.csv")
