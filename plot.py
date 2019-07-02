@@ -1,3 +1,4 @@
+import os
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
@@ -56,7 +57,7 @@ plt.title('Number of movies in IMDB Top 250 by genre', fontsize=30)
 plt.legend(['Number of movies'], fontsize = 15)
 plt.xlabel('Genres', fontsize=20)
 plt.ylabel('Number of movies', fontsize=20)
-plt.savefig('genre.png')
+plt.savefig(os.path.join('plots', 'genre.png'))
 
 # Plot movies by decade
 moviesByDecade.plot(x = 'Decade', y = 'Movies', kind = 'bar', figsize=(17, 17), fontsize = 15)
@@ -64,7 +65,7 @@ plt.title('Number of movies in IMDB Top 250 by decade', fontsize=30)
 plt.legend(['Number of movies'], fontsize = 15)
 plt.xlabel('Decade', fontsize=20)
 plt.ylabel('Number of movies', fontsize=20)
-plt.savefig('decade.png')
+plt.savefig(os.path.join('plots', 'decade.png'))
 
 # Plot average IMDB rating
 moviesByDecade.plot(x = 'Decade', y = 'Average IMDB Rating', kind = 'line', figsize=(17, 17), fontsize = 15)
@@ -72,4 +73,4 @@ plt.title('Average IMDB ratings of IMDB Top 250 movies by decade', fontsize=30)
 plt.legend(['Average IMDB rating'], fontsize = 15)
 plt.xlabel('Decade', fontsize=20)
 plt.ylabel('IMDB rating', fontsize=20)
-plt.savefig('average.png')
+plt.savefig(os.path.join('plots', 'average.png'))
