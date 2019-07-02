@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 import pandas as pd
 
 # Read data from csv file
@@ -10,7 +13,7 @@ movieRatings['Decade'] = ((movieRatings['Year']//10).astype(int)*10)
 moviesByDecade = pd.DataFrame({
 	'Decade' : movieRatings['Decade'].value_counts().index,
 	'Movies' : movieRatings['Decade'].value_counts(),
-	'Average IMDB Index' : None
+	'Average IMDB Rating' : None
 }).sort_values('Decade').reset_index(drop = True)
 
 # Calculate Average IMDB Ratings
@@ -46,3 +49,27 @@ for i in range(len(moviesByGenre)):
 	for j in range(len(movieRatings)):
 		if moviesByGenre.iloc[i, 0] in movieRatings.iloc[j, 2]:
 			moviesByGenre.iloc[i, 1]+=1
+
+# Plot movies by genre
+moviesByGenre.plot(x = 'Genres', y = 'Movies', kind = 'bar', figsize=(17, 17), fontsize = 15)
+plt.title('Number of movies in IMDB Top 250 by genre', fontsize=30)
+plt.legend(['Number of movies'], fontsize = 15)
+plt.xlabel('Genres', fontsize=20)
+plt.ylabel('Number of movies', fontsize=20)
+plt.savefig('genre.png')
+
+# Plot movies by decade
+moviesByDecade.plot(x = 'Decade', y = 'Movies', kind = 'bar', figsize=(17, 17), fontsize = 15)
+plt.title('Number of movies in IMDB Top 250 by decade', fontsize=30)
+plt.legend(['Number of movies'], fontsize = 15)
+plt.xlabel('Decade', fontsize=20)
+plt.ylabel('Number of movies', fontsize=20)
+plt.savefig('decade.png')
+
+# Plot average IMDB rating
+moviesByDecade.plot(x = 'Decade', y = 'Average IMDB Rating', kind = 'line', figsize=(17, 17), fontsize = 15)
+plt.title('Average IMDB ratings of IMDB Top 250 movies by decade', fontsize=30)
+plt.legend(['Average IMDB rating'], fontsize = 15)
+plt.xlabel('Decade', fontsize=20)
+plt.ylabel('IMDB rating', fontsize=20)
+plt.savefig('average.png')
