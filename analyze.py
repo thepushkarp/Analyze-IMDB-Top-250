@@ -9,7 +9,6 @@ movieNames = [] # Movie Names
 years = [] # Release Years
 genres = [] # Movie Genres
 imdbRatings = [] # IMDB Ratings
-metascores = [] # Metascores
 
 # For monitoring request frequency
 startTime = time.time()
@@ -59,13 +58,6 @@ for i in range(1, 201 + 1, 50):
 		rating = container.strong.text
 		imdbRatings.append(float(rating))
 
-		# Metascore
-		metascore = container.find('span', class_ = 'metascore favorable')
-		if metascore is not None:
-			metascores.append(int(metascore.text))
-		else:
-			metascores.append(None)
-
 print()
 
 # Create DataFrame of Movie Data
@@ -74,8 +66,6 @@ movieRatings = pd.DataFrame({
 'Year': years,
 'Genre': genres,
 'IMDB Rating': imdbRatings,
-'Metascore': metascores,
-'Normalised IMDB Rating': (pd.Series(imdbRatings)*10).tolist()
 })
 
 # Export data to .csv
