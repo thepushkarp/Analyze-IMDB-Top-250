@@ -17,11 +17,13 @@ reqNum = 0
 print("Fetching Webpages...")
 
 for i in range(1, 201 + 1, 50):
-	url = ('https://www.imdb.com/search/title/?groups=top_250&sort=user_rating,desc&start=' + str(i) + '&ref_=adv_nxt')
+	url = ('https://www.imdb.com/search/title/?groups=top_250&sort=user_rating,desc&start=' \
+		 + str(i) + '&ref_=adv_nxt')
 
 	# Make a get request
 	try:
-		response = requests.get(url, headers = {"Accept-Language": "en-US, en;q=0.5"})
+		response = requests.get(url, headers = {"Accept-Language": "en-US, \
+			en;q=0.5"})
 		response.raise_for_status()
 	# Throw warning in case of errors
 	except requests.exceptions.RequestException as excep:
@@ -38,7 +40,8 @@ for i in range(1, 201 + 1, 50):
 
 	# Parse the HTML Contents
 	imdbSoup = bs(response.text, 'lxml')
-	movieContainers = imdbSoup.find_all('div', class_ = 'lister-item mode-advanced')
+	movieContainers = imdbSoup.find_all('div', \
+		class_ = 'lister-item mode-advanced')
 
 	for container in movieContainers:
 
@@ -51,7 +54,8 @@ for i in range(1, 201 + 1, 50):
 		years.append(int(year[-5:-1]))
 
 		# Movie Genre
-		genre = container.p.find('span', class_ = 'genre').text.strip('\n').strip()
+		genre = container.p.find('span', class_ = 'genre') \
+			.text.strip('\n').strip()
 		genres.append(genre.split(', '))
 
 		# IMDB Rating

@@ -31,7 +31,6 @@ Léon: The Professional,1994,"['Action', 'Crime', 'Drama']",8.6
 The Silence of the Lambs,1991,"['Crime', 'Drama', 'Thriller']",8.6
 Star Wars: Episode IV - A New Hope,1977,"['Action', 'Adventure', 'Fantasy']",8.6
 It's a Wonderful Life,1946,"['Drama', 'Family', 'Fantasy']",8.6
-Dangal,2016,"['Action', 'Biography', 'Drama']",8.5
 Spider-Man: Into the Spider-Verse,2018,"['Animation', 'Action', 'Adventure']",8.5
 Avengers: Infinity War,2018,"['Action', 'Adventure', 'Sci-Fi']",8.5
 Whiplash,2014,"['Drama', 'Music']",8.5
@@ -59,8 +58,8 @@ Modern Times,1936,"['Comedy', 'Drama', 'Family']",8.5
 City Lights,1931,"['Comedy', 'Drama', 'Romance']",8.5
 Andhadhun,2018,"['Crime', 'Thriller']",8.4
 Your Name.,2016,"['Animation', 'Drama', 'Fantasy']",8.4
+Dangal,2016,"['Action', 'Biography', 'Drama']",8.4
 Coco,2017,"['Animation', 'Adventure', 'Comedy']",8.4
-Toy Story 4,2019,"['Animation', 'Adventure', 'Comedy']",8.4
 Django Unchained,2012,"['Drama', 'Western']",8.4
 The Dark Knight Rises,2012,"['Action', 'Thriller']",8.4
 3 Idiots,2009,"['Comedy', 'Drama']",8.4
@@ -81,6 +80,7 @@ Witness for the Prosecution,1957,"['Crime', 'Drama', 'Mystery']",8.4
 Paths of Glory,1957,"['Drama', 'War']",8.4
 Sunset Blvd.,1950,"['Drama', 'Film-Noir']",8.4
 The Hunt,2012,['Drama'],8.3
+Toy Story 4,2019,"['Animation', 'Adventure', 'Comedy']",8.3
 A Separation,2011,"['Drama', 'Thriller']",8.3
 Incendies,2010,"['Drama', 'Mystery', 'War']",8.3
 Toy Story 3,2010,"['Animation', 'Adventure', 'Comedy']",8.3
@@ -125,6 +125,7 @@ Green Book,2018,"['Biography', 'Comedy', 'Drama']",8.2
 "Three Billboards Outside Ebbing, Missouri",2017,"['Crime', 'Drama']",8.2
 Room,2015,"['Drama', 'Thriller']",8.2
 Winter Sleep,2014,['Drama'],8.2
+PK,2014,"['Comedy', 'Drama', 'Fantasy']",8.2
 Inside Out,2015,"['Animation', 'Adventure', 'Comedy']",8.2
 The Secret in Their Eyes,2009,"['Drama', 'Mystery', 'Romance']",8.2
 Warrior,2011,"['Drama', 'Sport']",8.2
@@ -231,7 +232,6 @@ Barry Lyndon,1975,"['Adventure', 'Drama', 'History']",8.1
 Butch Cassidy and the Sundance Kid,1969,"['Biography', 'Crime', 'Drama']",8.1
 Cool Hand Luke,1967,"['Crime', 'Drama']",8.1
 Persona,1966,"['Drama', 'Thriller']",8.1
-8½,1963,['Drama'],8.1
 The 400 Blows,1959,"['Crime', 'Drama']",8.1
 Ben-Hur,1959,"['Adventure', 'Drama', 'History']",8.1
 Diabolique,1955,"['Crime', 'Drama', 'Horror']",8.1

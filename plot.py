@@ -4,6 +4,8 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import pandas as pd
 
+print('Reading data from csv...')
+
 # Read data from csv file
 movieRatings = pd.read_csv('movieRatings.csv', header = 0)
 
@@ -51,8 +53,11 @@ for i in range(len(moviesByGenre)):
 		if moviesByGenre.iloc[i, 0] in movieRatings.iloc[j, 2]:
 			moviesByGenre.iloc[i, 1]+=1
 
+print('Ploting graphs of the data...')
+
 # Plot movies by genre
-moviesByGenre.plot(x = 'Genres', y = 'Movies', kind = 'bar', figsize=(17, 17), fontsize = 15)
+moviesByGenre.plot(x = 'Genres', y = 'Movies', kind = 'bar', figsize=(17, 17), \
+	fontsize = 15)
 plt.title('Number of movies in IMDB Top 250 by genre', fontsize=30)
 plt.legend(['Number of movies'], fontsize = 15)
 plt.xlabel('Genres', fontsize=20)
@@ -60,7 +65,8 @@ plt.ylabel('Number of movies', fontsize=20)
 plt.savefig(os.path.join('plots', 'genre.png'))
 
 # Plot movies by decade
-moviesByDecade.plot(x = 'Decade', y = 'Movies', kind = 'bar', figsize=(17, 17), fontsize = 15)
+moviesByDecade.plot(x = 'Decade', y = 'Movies', kind = 'bar', figsize=(17, 17), \
+	fontsize = 15)
 plt.title('Number of movies in IMDB Top 250 by decade', fontsize=30)
 plt.legend(['Number of movies'], fontsize = 15)
 plt.xlabel('Decade', fontsize=20)
@@ -68,9 +74,12 @@ plt.ylabel('Number of movies', fontsize=20)
 plt.savefig(os.path.join('plots', 'decade.png'))
 
 # Plot average IMDB rating
-moviesByDecade.plot(x = 'Decade', y = 'Average IMDB Rating', kind = 'line', figsize=(17, 17), fontsize = 15)
+moviesByDecade.plot(x = 'Decade', y = 'Average IMDB Rating', kind = 'line', \
+	figsize=(17, 17), fontsize = 15)
 plt.title('Average IMDB ratings of IMDB Top 250 movies by decade', fontsize=30)
 plt.legend(['Average IMDB rating'], fontsize = 15)
 plt.xlabel('Decade', fontsize=20)
 plt.ylabel('IMDB rating', fontsize=20)
 plt.savefig(os.path.join('plots', 'average.png'))
+
+print('Plots saved in \'plots\' folder')
